@@ -4,22 +4,12 @@
  * SPDX-License-Identifier: MIT
  */
 
+
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
 / {
-    behaviors {
-        lock: lock {
-            compatible = "zmk,behavior-tap-dance";
-            label = "LOCK";
-            #binding-cells = <0>;
-            bindings = <&kp LEFT_WIN>, <&kp LEFT_WIN>;
-
-            tapping-term-ms = <200>;
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
@@ -34,23 +24,24 @@
 
         num {
             bindings = <
-&trans  &kp EXCL       &kp AT_SIGN    &kp HASH  &kp DOLLAR  &kp CARET    &kp PLUS   &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp ASTERISK  &kp PIPE
-&trans  &kp AMPERSAND  &kp LG(LS(S))  &trans    &trans      &trans       &kp MINUS  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp SLASH     &kp BACKSLASH
-&trans  &trans         &trans         &trans    &trans      &trans       &kp EQUAL  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PERCENT   &kp PERIOD
-                                      &trans    &trans      &trans       &trans     &trans           &kp KP_NUMBER_0
+&trans     &kp EXCL       &kp AT_SIGN    &kp HASH  &kp DOLLAR  &kp CARET    &kp PLUS   &kp N7  &kp N8  &kp N9        &kp ASTERISK  &kp PIPE
+&trans     &kp AMPERSAND  &kp LG(LS(S))  &trans    &trans      &trans       &kp MINUS  &kp N4  &kp N5  &kp N6        &kp SLASH     &kp BACKSLASH
+&kp LG(L)  &trans         &trans         &trans    &trans      &trans       &kp EQUAL  &kp N1  &kp N2  &kp NUMBER_3  &kp PERCENT   &kp PERIOD
+                                         &trans    &trans      &trans       &trans     &trans  &kp N0
             >;
         };
 
         move {
             bindings = <
 &kp ESC   &kp GRAVE       &kp KP_DIVIDE  &kp LEFT_BRACE  &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &kp BACKSLASH  &kp MINUS     &kp EQUAL
-&kp HOME  &kp LEFT_ARROW  &kp UP_ARROW   &kp DOWN_ARROW  &kp RIGHT_ARROW   &kp END                 &trans                 &trans             &trans           &trans         &none         &none
-&trans    &trans          &kp F2         &kp INSERT      &kp DEL           &kp K_CONTEXT_MENU      &trans                 &trans             &trans           &trans         &bt BT_SEL 0  &bt BT_SEL 1
+&kp HOME  &kp LEFT_ARROW  &kp UP_ARROW   &kp DOWN_ARROW  &kp RIGHT_ARROW   &kp END                 &trans                 &trans             &trans           &trans         &bt BT_PRV    &bt BT_NXT
+&trans    &kp BACKSPACE   &kp F2         &kp INSERT      &kp DEL           &kp K_CONTEXT_MENU      &trans                 &trans             &trans           &trans         &bt BT_SEL 0  &bt BT_SEL 1
                                          &trans          &trans            &trans                  &trans                 &trans             &bt BT_CLR
             >;
         };
     };
 };
+
 
 
 
