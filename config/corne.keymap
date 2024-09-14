@@ -32,7 +32,7 @@
 
         move {
             bindings = <
-&kp ESC   &kp GRAVE       &trans        &trans          &trans           &trans                &trans  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp LA(INSERT)  &trans           &trans
+&kp ESC   &kp GRAVE       &trans        &trans          &trans           &trans                &trans  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp MINUS       &kp RA(INSERT)   &trans
 &kp HOME  &kp LEFT_ARROW  &kp UP_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp END               &trans  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LEFT_BRACE  &kp RIGHT_BRACE  &trans
 &trans    &kp BACKSPACE   &kp F2        &kp INSERT      &kp DEL          &kp K_CONTEXT_MENU    &trans  &trans                &trans                 &trans          &trans           &trans
                                         &trans          &mo 3            &trans                &trans  &trans                &trans
@@ -41,7 +41,7 @@
 
         layer_3 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans      &trans  &trans        &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans      &trans  &bt BT_SEL 2  &bt BT_SEL 3
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans      &trans  &bt BT_PRV    &bt BT_NXT
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans      &trans  &bt BT_SEL 0  &bt BT_SEL 1
                         &trans  &trans  &trans    &trans  &trans  &bt BT_CLR
@@ -49,6 +49,10 @@
         };
     };
 };
+
+
+
+
 
 
 
