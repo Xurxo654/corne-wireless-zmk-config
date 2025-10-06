@@ -9,6 +9,15 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
+    macros {
+        pw_ste: pw_ste {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(D) &kp E &kp A &kp D &kp P &kp O &kp O &kp L &kp LS(K) &kp N &kp O &kp W &kp S &kp LS(K) &kp N &kp I &kp V &kp N3 &kp N5 &kp EXCL>;
+            label = "PW_STE";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -32,10 +41,10 @@
 
         move {
             bindings = <
-&kp ESC   &kp GRAVE       &trans        &trans          &trans           &trans                &trans  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp MINUS       &kp RA(INSERT)   &trans
-&kp HOME  &kp LEFT_ARROW  &kp UP_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp END               &trans  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LEFT_BRACE  &kp RIGHT_BRACE  &trans
-&trans    &kp BACKSPACE   &kp F2        &kp INSERT      &kp DEL          &kp K_CONTEXT_MENU    &trans  &trans                &trans                 &trans          &trans           &trans
-                                        &trans          &mo 3            &trans                &trans  &trans                &trans
+&kp ESC   &kp GRAVE       &trans        &trans          &trans           &trans                &trans   &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp MINUS       &kp RA(INSERT)   &trans
+&kp HOME  &kp LEFT_ARROW  &kp UP_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp END               &pw_ste  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LEFT_BRACE  &kp RIGHT_BRACE  &trans
+&trans    &kp BACKSPACE   &kp F2        &kp INSERT      &kp DEL          &kp K_CONTEXT_MENU    &trans   &trans                &trans                 &trans          &trans           &trans
+                                        &trans          &mo 3            &trans                &trans   &trans                &trans
             >;
         };
 
@@ -49,6 +58,7 @@
         };
     };
 };
+
 
 
 
